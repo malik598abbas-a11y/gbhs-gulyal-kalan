@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBHS Gulyal Kalan, Jand • Govt Boys High School</title>
+  
+  <!-- Modern Google Fonts: Plus Jakarta Sans & Outfit & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Remix Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Notification Strip -->
+  <aside class="top-bar-alert" aria-label="Announcement">
+    <div class="container top-bar-flex">
+      <div class="top-info-left">
+        <span class="badge-pulse"><span class="pulse-dot"></span> Admissions Open 2026-27</span>
+        <span class="alert-text">Admissions open for Class 6th to 10th (Science & Computer Wings) • Free Textbooks & Govt Stipends!</span>
+      </div>
+      <div class="top-info-right">
+        <a href="tel:+92577710022" class="top-link"><i class="ri-phone-fill"></i> +92 (57) 771-0022</a>
+        <a href="mailto:info@gbhsgulyal.edu.pk" class="top-link"><i class="ri-mail-fill"></i> info@gbhsgulyal.edu.pk</a>
+        <button class="portal-shortcut-btn" onclick="schoolApp.openPortalModal()"><i class="ri-user-shared-line"></i> Student Portal</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Floating Glass Navbar -->
+  <header class="main-navbar" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-crest">
+          <i class="ri-graduation-cap-fill"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">GBHS GULYAL KALAN</span>
+          <span class="brand-tag">GOVT BOYS HIGH SCHOOL • TEHSIL JAND</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        <a href="#hero" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About School</a>
+        <a href="#academics" class="nav-item">Academics</a>
+        <a href="#facilities" class="nav-item">Campus & Labs</a>
+        <a href="#calculator" class="nav-item">Stipend & Funds</a>
+        <a href="#admissions" class="nav-item">Admissions</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- CTA Buttons & Mobile Drawer Trigger -->
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm" onclick="schoolApp.openTourModal()">
+          <i class="ri-play-circle-line"></i> Campus View
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="schoolApp.openAdmissionModal()">
+          <i class="ri-edit-2-line"></i> Online Admission
+        </button>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="logo-crest"><i class="ri-graduation-cap-fill"></i></div>
+        <span class="brand-name">GBHS GULYAL KALAN</span>
+      </div>
+      <button class="drawer-close" id="drawerCloseBtn"><i class="ri-close-line"></i></button>
+    </div>
+    <div class="drawer-links">
+      <a href="#hero" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">Home</a>
+      <a href="#about" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">About School</a>
+      <a href="#academics" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">Academic Wings</a>
+      <a href="#facilities" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">Labs & Sports Ground</a>
+      <a href="#calculator" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">Stipends & Funds</a>
+      <a href="#admissions" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">Admission Process</a>
+      <a href="#contact" class="drawer-item" onclick="schoolApp.closeMobileDrawer()">Contact & Visit</a>
+    </div>
+    <div class="drawer-foot">
+      <button class="btn btn-primary w-100 mb-2" onclick="schoolApp.openAdmissionModal(); schoolApp.closeMobileDrawer();">Apply for Admission</button>
+      <button class="btn btn-outline w-100" onclick="schoolApp.openPortalModal(); schoolApp.closeMobileDrawer();">Student Portal Login</button>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ==============================================
+       HERO SECTION
+       ============================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape-blob shape-1"></div>
+      <div class="shape-blob shape-2"></div>
+      <div class="shape-blob shape-3"></div>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-pill-badge">
+          <i class="ri-award-fill"></i> School Education Dept, Govt of Punjab • EMIS: 37120014
+        </div>
+        <h1 class="hero-title">
+          Empowering the Youth of <span class="gradient-headline">Gulyal Kalan & Jand</span> with Knowledge.
+        </h1>
+        <p class="hero-desc">
+          Government Boys High School Gulyal Kalan (Tehsil Jand, District Attock) is committed to academic excellence, state-of-the-art computer education, scientific discovery, and moral discipline affiliated with BISE Rawalpindi.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="schoolApp.openAdmissionModal()">
+            <i class="ri-file-user-line"></i> Enroll for Session 2026-27
+          </button>
+          <a href="#academics" class="btn btn-glass btn-lg">
+            <i class="ri-book-open-line"></i> Academic Streams
+          </a>
+        </div>
+
+        <!-- Quick highlights badges -->
+        <div class="hero-badges-row">
+          <div class="h-badge"><i class="ri-check-double-line text-emerald"></i> BISE Rawalpindi Affiliated</div>
+          <div class="h-badge"><i class="ri-check-double-line text-emerald"></i> Fully Equipped Computer & Science Labs</div>
+          <div class="h-badge"><i class="ri-check-double-line text-emerald"></i> Free Textbooks & Punjab Govt Stipends</div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual-card-wrap">
+        <div class="hero-image-frame">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=900&auto=format&fit=crop&q=80" alt="GBHS Gulyal Kalan Students" class="hero-main-img">
+          
+          <!-- Floating Glass Highlights -->
+          <div class="float-stat-card card-top-right">
+            <div class="stat-icon-wrap icon-amber"><i class="ri-trophy-fill"></i></div>
+            <div>
+              <span class="stat-val">100% Matric Result</span>
+              <span class="stat-lbl">BISE Rawalpindi Board</span>
+            </div>
+          </div>
+
+          <div class="float-stat-card card-bottom-left">
+            <div class="stat-icon-wrap icon-cyan"><i class="ri-team-fill"></i></div>
+            <div>
+              <span class="stat-val">30+ Certified Teachers</span>
+              <span class="stat-lbl">SST, EST, PST & IT Masters</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Metrics Counter Bar -->
+    <div class="container">
+      <div class="stats-counter-strip">
+        <div class="counter-item">
+          <span class="counter-num">100%</span>
+          <span class="counter-label">Matric Board Pass Rate</span>
+        </div>
+        <div class="counter-divider"></div>
+        <div class="counter-item">
+          <span class="counter-num">1,250+</span>
+          <span class="counter-label">Enrolled Active Students</span>
+        </div>
+        <div class="counter-divider"></div>
+        <div class="counter-item">
+          <span class="counter-num">7,800+</span>
+          <span class="counter-label">Proud Alumni across Pakistan</span>
+        </div>
+        <div class="counter-divider"></div>
+        <div class="counter-item">
+          <span class="counter-num">Est. 1952</span>
+          <span class="counter-label">Decades of Academic Legacy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 2: LIVE CAMPUS NOTICE BOARD
+       ============================================== -->
+  <section class="notice-board-section">
+    <div class="container">
+      <div class="notice-card-glass">
+        <div class="notice-left-label">
+          <i class="ri-broadcast-fill"></i>
+          <span>CAMPUS NOTICE BOARD:</span>
+        </div>
+        <div class="notice-ticker" id="noticeTicker">
+          <div class="ticker-content" id="tickerContent">
+            🔔 <strong>Admissions:</strong> Online & On-campus admissions for 6th Class and 9th Science (Bio/Comp) are open for 2026-27. &nbsp;|&nbsp; 
+            🏆 <strong>Tehsil Sports:</strong> GBHS Gulyal Kalan won the Tehsil Jand Inter-School Cricket Championship! &nbsp;|&nbsp; 
+            📚 <strong>Free Books:</strong> Free textbook distribution begins next Monday at the main auditorium.
+          </div>
+        </div>
+        <button class="btn btn-xs btn-outline" onclick="schoolApp.showAllNotices()">View All</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 3: ABOUT SCHOOL & HEADMASTER MESSAGE
+       ============================================== -->
+  <section class="section-padding about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-image-stack">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop&q=80" alt="GBHS Gulyal Kalan Campus" class="about-img-main">
+        <div class="about-badge-exp">
+          <span class="exp-years">70+</span>
+          <span class="exp-text">Years Serving Gulyal & Jand</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-tag"><i class="ri-shield-star-line"></i> OUR HERITAGE & MISSION</div>
+        <h2 class="section-heading">Nurturing Character, Intellect & Future Leaders of Pakistan.</h2>
+        <p class="section-lead">
+          Government Boys High School Gulyal Kalan, Tehsil Jand (Attock) has been a cornerstone of quality public education since its establishment. Under the School Education Department Punjab, we equip students with strong moral foundations, modern science and computer skills, and patriotic dedication.
+        </p>
+
+        <div class="core-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon icon-blue"><i class="ri-computer-line"></i></div>
+            <div>
+              <h4>Modern IT & Computer Lab</h4>
+              <p>Equipped with networked computers, high-speed internet, and certified computer science instructors.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon icon-emerald"><i class="ri-flask-line"></i></div>
+            <div>
+              <h4>Comprehensive Science Labs</h4>
+              <p>Fully equipped apparatus for practical demonstrations in Physics, Chemistry, and Biology.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon icon-amber"><i class="ri-football-line"></i></div>
+            <div>
+              <h4>Spacious Sports Grounds</h4>
+              <p>Dedicated fields for cricket, football, volleyball, athletics, and annual Tehsil sports competitions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="principal-quote-box">
+          <div class="principal-avatar">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=120&auto=format&fit=crop&q=80" alt="Headmaster">
+          </div>
+          <div>
+            <blockquote class="principal-quote">
+              "Our mission at GBHS Gulyal Kalan is to provide the highest standard of modern education to every child in our community, fostering discipline, knowledge, and national pride."
+            </blockquote>
+            <cite class="principal-name">— Headmaster, Govt Boys High School Gulyal Kalan, Jand</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 4: ACADEMIC DIVISIONS & CURRICULA
+       ============================================== -->
+  <section class="section-padding bg-subtle" id="academics">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="ri-book-3-line"></i> ACADEMIC PROGRAMMES</div>
+        <h2 class="section-heading">Structured Learning from Primary to Matriculation</h2>
+        <p class="section-lead max-600">Punjab Curriculum and Textbook Board (PCTB) and BISE Rawalpindi certified academic divisions.</p>
+      </div>
+
+      <!-- Academic Division Tabs -->
+      <div class="academic-tabs-bar">
+        <button class="acad-tab-btn active" data-tab="primary">Primary Wing (Class 1-5)</button>
+        <button class="acad-tab-btn" data-tab="middle">Middle Wing (Class 6-8)</button>
+        <button class="acad-tab-btn" data-tab="matricBio">Matric Science (Biology)</button>
+        <button class="acad-tab-btn" data-tab="matricComp">Matric Science (Computer)</button>
+        <button class="acad-tab-btn" data-tab="arts">Humanities & General Arts</button>
+      </div>
+
+      <!-- Tab Content Cards -->
+      <div class="academic-display-card" id="acadDisplay"></div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 5: CAMPUS FACILITIES & LIFE
+       ============================================== -->
+  <section class="section-padding" id="facilities">
+    <div class="container">
+      <div class="section-header flex-between">
+        <div>
+          <div class="section-tag"><i class="ri-building-4-line"></i> INFRASTRUCTURE & FACILITIES</div>
+          <h2 class="section-heading">Campus Environment & Learning Resources</h2>
+        </div>
+        <div class="gallery-filters" id="galleryFilters">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="stem">Science & IT</button>
+          <button class="filter-pill" data-filter="sports">Sports Ground</button>
+          <button class="filter-pill" data-filter="campus">Campus</button>
+        </div>
+      </div>
+
+      <!-- Interactive Campus Grid -->
+      <div class="facilities-grid" id="facilitiesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 6: STIPEND & WELFARE FUND ESTIMATOR
+       ============================================== -->
+  <section class="section-padding bg-gradient-mesh" id="calculator">
+    <div class="container">
+      <div class="fee-calculator-card">
+        <div class="fee-calc-header">
+          <div class="section-tag text-cyan"><i class="ri-hand-heart-line"></i> FREE PUBLIC EDUCATION & WELFARE</div>
+          <h2 class="calc-title">Government Free Education & Student Welfare Estimator</h2>
+          <p class="calc-sub">As a Government High School, tuition and textbooks are 100% FREE. Calculate government stipends, Khidmat cards, and nominal annual student welfare funds.</p>
+        </div>
+
+        <div class="fee-calc-grid">
+          <div class="calc-inputs">
+            <div class="form-group-custom">
+              <label><i class="ri-graduation-cap-line"></i> Enrolled Class / Grade</label>
+              <select id="feeGradeSelect" class="form-select-custom" onchange="schoolApp.calculateFee()">
+                <option value="primary">Primary Classes (Class 1 to 5) - 100% Free</option>
+                <option value="middle" selected>Middle Classes (Class 6 to 8) - 100% Free</option>
+                <option value="matricBio">9th / 10th Science (Biology Group)</option>
+                <option value="matricComp">9th / 10th Science (Computer Group)</option>
+                <option value="arts">9th / 10th Arts / General Group</option>
+              </select>
+            </div>
+
+            <div class="form-group-custom">
+              <label><i class="ri-bus-wifi-line"></i> Daily Commute / Area</label>
+              <select id="feeTransportSelect" class="form-select-custom" onchange="schoolApp.calculateFee()">
+                <option value="local">Gulyal Kalan Local (Walking / Bicycle)</option>
+                <option value="jand">Commute from Jand / Nearby Villages</option>
+                <option value="mithial">Commute from Mithial / Pind Sultani area</option>
+              </select>
+            </div>
+
+            <div class="form-group-custom">
+              <label><i class="ri-award-line"></i> Punjab Govt Stipend / Merit Category</label>
+              <select id="feeDiscountSelect" class="form-select-custom" onchange="schoolApp.calculateFee()">
+                <option value="standard">Regular Student (Free Books + Free Tuition)</option>
+                <option value="stipend">Govt Monthly Stipend Eligible (₨ 1,000/mo grant)</option>
+                <option value="orphan">Orphan / Bait-ul-Maal Welfare Assistance (₨ 2,000/mo grant)</option>
+                <option value="topper">Board Topper Merit Award (Special Cash Prize)</option>
+              </select>
+            </div>
+
+            <div class="checkbox-options-wrap">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="checkBooks" checked disabled>
+                <span class="checkmark"></span>
+                <span>Punjab Govt 100% Free Textbooks Scheme (Included)</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" id="checkIT" onchange="schoolApp.calculateFee()" checked>
+                <span class="checkmark"></span>
+                <span>Free Computer & Practical Lab Access</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Fee Calculation Result Card -->
+          <div class="calc-result-box">
+            <div class="result-head">
+              <span>Tuition Cost to Parents</span>
+              <div class="price-display">
+                <span class="currency">PKR</span>
+                <span class="amount" id="calcTotalAmount">0</span>
+                <span class="period">/ month (Free Govt Education)</span>
+              </div>
+            </div>
+
+            <div class="fee-breakdown-list" id="feeBreakdownList"></div>
+
+            <div class="fee-card-actions">
+              <button class="btn btn-primary w-100" onclick="schoolApp.openAdmissionModalWithGrade()">
+                <i class="ri-check-line"></i> Apply for Free Enrollment
+              </button>
+              <p class="fee-disclaimer">* Free textbooks provided by Punjab Textbook Board. Only minimal annual sports/examination board fees apply as per SED rules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 7: ADMISSIONS PROCESS
+       ============================================== -->
+  <section class="section-padding" id="admissions">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="ri-file-list-3-line"></i> ADMISSION PROCESS</div>
+        <h2 class="section-heading">How to Enroll in GBHS Gulyal Kalan</h2>
+        <p class="section-lead max-600">Straightforward admission process for local residents of Gulyal Kalan, Jand, and surrounding villages.</p>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon"><i class="ri-draft-line"></i></div>
+          <h4>Submit Admission Form</h4>
+          <p>Fill out the online application or obtain the physical form from the school office.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon"><i class="ri-file-copy-2-line"></i></div>
+          <h4>Document Verification</h4>
+          <p>Provide student B-Form, Father CNIC copy, and previous school School Leaving Certificate (SLC).</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon"><i class="ri-pencil-ruler-2-line"></i></div>
+          <h4>Subject & Stream Selection</h4>
+          <p>Guidance counseling for 9th Class students choosing Biology or Computer Science stream.</p>
+        </div>
+
+        <div class="step-card highlight-step">
+          <div class="step-num">04</div>
+          <div class="step-icon"><i class="ri-book-read-line"></i></div>
+          <h4>Book Distribution & Roll #</h4>
+          <p>Receive your Punjab Govt free textbook set, student ID card, and roll number allocation!</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <button class="btn btn-primary btn-lg" onclick="schoolApp.openAdmissionModal()">
+          <i class="ri-login-box-line"></i> Submit Online Admission Application
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 8: ALUMNI & STUDENT ACHIEVEMENTS
+       ============================================== -->
+  <section class="section-padding bg-subtle" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="ri-trophy-line"></i> ALUMNI & COMMUNITY PRIDE</div>
+        <h2 class="section-heading">Voices of Our Community & Achievers</h2>
+      </div>
+
+      <div class="testimonial-slider-wrap">
+        <div class="testimonial-cards-grid" id="testimonialGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SECTION 9: CONTACT & LOCATION
+       ============================================== -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="contact-card-glass">
+        <div class="contact-info-side">
+          <div class="section-tag text-cyan"><i class="ri-map-pin-line"></i> LOCATION & REACH</div>
+          <h2>Visit GBHS Gulyal Kalan</h2>
+          <p class="contact-lead">We welcome parents and prospective students to visit our campus during official school hours.</p>
+
+          <div class="contact-details-list">
+            <div class="c-item">
+              <div class="c-icon"><i class="ri-map-pin-2-fill"></i></div>
+              <div>
+                <strong>School Campus Address:</strong>
+                <span>Govt Boys High School Gulyal Kalan, Tehsil Jand, District Attock, Punjab, Pakistan</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon"><i class="ri-phone-fill"></i></div>
+              <div>
+                <strong>Office Contact:</strong>
+                <span>+92 (57) 771-0022</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon"><i class="ri-mail-send-fill"></i></div>
+              <div>
+                <strong>Official Email:</strong>
+                <span>info@gbhsgulyal.edu.pk &nbsp;|&nbsp; headmaster@gbhsgulyal.edu.pk</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon"><i class="ri-time-fill"></i></div>
+              <div>
+                <strong>School Timings:</strong>
+                <span>Monday – Thursday: 7:30 AM – 1:30 PM &nbsp;|&nbsp; Friday: 7:30 AM – 11:30 AM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Inquiry Form -->
+        <div class="contact-form-side">
+          <form id="quickContactForm" onsubmit="schoolApp.handleContactSubmit(event)">
+            <h3>Send Message to School Office</h3>
+            <p class="form-sub">Our office administration will address your query promptly.</p>
+
+            <div class="form-grid-2">
+              <div class="form-group-custom">
+                <label>Parent / Student Name *</label>
+                <input type="text" id="contactParent" class="form-input-custom" required placeholder="e.g. Muhammad Asif">
+              </div>
+              <div class="form-group-custom">
+                <label>Mobile Number *</label>
+                <input type="tel" id="contactPhone" class="form-input-custom" required placeholder="0300-1234567">
+              </div>
+            </div>
+
+            <div class="form-group-custom">
+              <label>Village / Area in Jand</label>
+              <input type="text" id="contactEmail" class="form-input-custom" placeholder="e.g. Gulyal Kalan, Jand, Mithial...">
+            </div>
+
+            <div class="form-group-custom">
+              <label>Interested Class for Admission</label>
+              <select id="contactGrade" class="form-select-custom">
+                <option value="6th Class">Class 6th</option>
+                <option value="7th Class">Class 7th</option>
+                <option value="8th Class">Class 8th</option>
+                <option value="9th Science (Biology)">9th Science (Biology)</option>
+                <option value="9th Science (Computer)">9th Science (Computer)</option>
+                <option value="9th Arts">9th Arts / Humanities</option>
+              </select>
+            </div>
+
+            <div class="form-group-custom">
+              <label>Your Inquiry / Message</label>
+              <textarea id="contactMessage" rows="3" class="form-input-custom" placeholder="Write any question regarding admissions, documents, or school transfer..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              <i class="ri-send-plane-fill"></i> Submit Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       FOOTER
+       ============================================== -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="#" class="brand-logo">
+          <div class="logo-crest"><i class="ri-graduation-cap-fill"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">GBHS GULYAL KALAN</span>
+            <span class="brand-tag">GOVT BOYS HIGH SCHOOL • JAND</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Government Boys High School Gulyal Kalan, Tehsil Jand (District Attock). Providing quality secondary education, scientific practical training, and disciplined character building under the School Education Department, Government of the Punjab.
+        </p>
+        <div class="social-links-row">
+          <a href="#" title="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" title="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="#" title="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-head">Academics</h5>
+        <ul class="footer-list">
+          <li><a href="#academics">Primary Wing (1-5)</a></li>
+          <li><a href="#academics">Middle Wing (6-8)</a></li>
+          <li><a href="#academics">Matric Science (Biology)</a></li>
+          <li><a href="#academics">Matric Science (Computer)</a></li>
+          <li><a href="#academics">General Arts Group</a></li>
+          <li><a href="#facilities">Computer & IT Lab</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-head">Admissions & Portal</h5>
+        <ul class="footer-list">
+          <li><a href="#admissions">Admission Guidelines</a></li>
+          <li><a href="#calculator">Govt Free Books & Stipends</a></li>
+          <li><a href="#" onclick="schoolApp.openTourModal(); return false;">Campus Photo Gallery</a></li>
+          <li><a href="#" onclick="schoolApp.openAdmissionModal(); return false;">Online Admission Form</a></li>
+          <li><a href="#" onclick="schoolApp.openPortalModal(); return false;">Student Attendance & Result</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-head">School Administration</h5>
+        <ul class="footer-list">
+          <li><span>EMIS Code: 37120014</span></li>
+          <li><span>BISE Rawalpindi Code: 32014</span></li>
+          <li><span>Markaz: Jand-1</span></li>
+          <li><span>District: Attock, Punjab</span></li>
+          <li><a href="#contact">Contact Headmaster</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <span>© 2026 Government Boys High School (GBHS) Gulyal Kalan, Tehsil Jand (District Attock).</span>
+        <div class="footer-legal">
+          <a href="#">School Education Dept Punjab</a>
+          <a href="#">BISE Rawalpindi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       MODALS
+       ============================================== -->
+
+  <!-- 1. ONLINE ADMISSION APPLICATION MODAL -->
+  <div class="modal-wrapper" id="admissionModal">
+    <div class="modal-backdrop" onclick="schoolApp.closeModal('admissionModal')"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3>GBHS Gulyal Kalan - Admission Form</h3>
+          <p class="modal-sub">Academic Session 2026 - 2027 • Tehsil Jand, Attock</p>
+        </div>
+        <button class="modal-close-btn" onclick="schoolApp.closeModal('admissionModal')"><i class="ri-close-line"></i></button>
+      </div>
+
+      <form id="admissionForm" onsubmit="schoolApp.handleAdmissionSubmit(event)">
+        <div class="modal-scroll-area">
+          <div class="form-section-title">1. Student Credentials</div>
+          <div class="form-grid-2">
+            <div class="form-group-custom">
+              <label>Student's Full Name *</label>
+              <input type="text" id="appStudentName" class="form-input-custom" required placeholder="e.g. Muhammad Usman">
+            </div>
+            <div class="form-group-custom">
+              <label>Date of Birth *</label>
+              <input type="date" id="appStudentDOB" class="form-input-custom" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group-custom">
+              <label>Student B-Form / Bay-Form Number</label>
+              <input type="text" id="appStudentBForm" class="form-input-custom" placeholder="37102-xxxxxxx-x">
+            </div>
+            <div class="form-group-custom">
+              <label>Applying for Class *</label>
+              <select id="appGrade" class="form-select-custom" required>
+                <option value="Class 6th">Class 6th</option>
+                <option value="Class 7th">Class 7th</option>
+                <option value="Class 8th">Class 8th</option>
+                <option value="9th Science (Biology)">9th Science (Biology Group)</option>
+                <option value="9th Science (Computer)">9th Science (Computer Science Group)</option>
+                <option value="9th Arts">9th Arts / Humanities</option>
+                <option value="Class 1st to 5th">Primary (Class 1 to 5)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group-custom">
+            <label>Previous School (If Transferring)</label>
+            <input type="text" id="appPrevSchool" class="form-input-custom" placeholder="e.g. GPS Gulyal Kalan or other school">
+          </div>
+
+          <div class="form-section-title mt-4">2. Father / Guardian & Contact</div>
+          <div class="form-grid-2">
+            <div class="form-group-custom">
+              <label>Father / Guardian Name *</label>
+              <input type="text" id="appFatherName" class="form-input-custom" required placeholder="e.g. Muhammad Tariq">
+            </div>
+            <div class="form-group-custom">
+              <label>Father's CNIC Number</label>
+              <input type="text" id="appFatherCNIC" class="form-input-custom" placeholder="37102-xxxxxxx-x">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group-custom">
+              <label>Contact Mobile Number (WhatsApp) *</label>
+              <input type="tel" id="appPhone" class="form-input-custom" required placeholder="0300-1234567">
+            </div>
+            <div class="form-group-custom">
+              <label>Village / Mohallah *</label>
+              <input type="text" id="appAddress" class="form-input-custom" required placeholder="Gulyal Kalan / Jand / Nearby Village">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="schoolApp.closeModal('admissionModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Admission Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. STUDENT PORTAL LOGIN MODAL -->
+  <div class="modal-wrapper" id="portalModal">
+    <div class="modal-backdrop" onclick="schoolApp.closeModal('portalModal')"></div>
+    <div class="modal-card modal-sm">
+      <div class="modal-header">
+        <div>
+          <h3>GBHS Gulyal Kalan Portal</h3>
+          <p class="modal-sub">Student SIS & Attendance System</p>
+        </div>
+        <button class="modal-close-btn" onclick="schoolApp.closeModal('portalModal')"><i class="ri-close-line"></i></button>
+      </div>
+      <form id="portalForm" onsubmit="schoolApp.handlePortalLogin(event)">
+        <div class="modal-scroll-area">
+          <div class="portal-badge-banner">
+            <i class="ri-shield-keyhole-line"></i>
+            <span>Demo: Roll # <code>1042</code> • Password <code>1234</code></span>
+          </div>
+
+          <div class="form-group-custom">
+            <label>Student Roll # or Registration #</label>
+            <input type="text" id="portalId" class="form-input-custom" required value="1042">
+          </div>
+          <div class="form-group-custom">
+            <label>Password</label>
+            <input type="password" id="portalPass" class="form-input-custom" required value="1234">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary w-100">
+            <i class="ri-login-circle-line"></i> Login to Portal
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. CAMPUS TOUR MODAL -->
+  <div class="modal-wrapper" id="tourModal">
+    <div class="modal-backdrop" onclick="schoolApp.closeModal('tourModal')"></div>
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div>
+          <h3>GBHS Gulyal Kalan Campus Tour</h3>
+          <p class="modal-sub">Tehsil Jand, District Attock</p>
+        </div>
+        <button class="modal-close-btn" onclick="schoolApp.closeModal('tourModal')"><i class="ri-close-line"></i></button>
+      </div>
+      <div class="modal-scroll-area">
+        <div class="tour-video-preview">
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1000&auto=format&fit=crop&q=80" alt="GBHS Gulyal Kalan Campus View">
+          <div class="tour-play-badge">
+            <i class="ri-check-line"></i>
+            <span>School Campus, Playgrounds & Labs</span>
+          </div>
+        </div>
+        <div class="tour-highlights-row">
+          <div class="t-pill"><i class="ri-computer-line"></i> IT & Computer Lab</div>
+          <div class="t-pill"><i class="ri-flask-line"></i> Science Laboratories</div>
+          <div class="t-pill"><i class="ri-football-line"></i> Cricket & Football Ground</div>
+          <div class="t-pill"><i class="ri-book-line"></i> School Library</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="schoolApp.openAdmissionModal(); schoolApp.closeModal('tourModal');">
+          Apply for Admission
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Stack -->
+  <div class="toast-stack" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
